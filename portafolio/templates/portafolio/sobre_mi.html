@@ -1,0 +1,106 @@
+{% extends 'portafolio/base.html' %}
+
+{% block contenido %}
+    <h1>Sobre mí</h1>
+
+    <div class="tarjeta">
+        <h2>Rivaldo Denilson Benjamin Tale Ajucum</h2>
+
+        <p>
+            Estudio el Técnico Universitario en Informática
+            en la Universidad del Valle de Guatemala,
+            Campus Altiplano.
+        </p>
+
+        <p>
+            Me caracterizo por la disposición para aprender,
+            la responsabilidad y el trabajo en equipo.
+            Me interesa el desarrollo de aplicaciones,
+            el soporte técnico y las redes de computadoras.
+        </p>
+    </div>
+
+    <div class="sobre-mi">
+        <div class="tarjeta">
+            <h2 class="titulo-icono">
+                <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="7" width="18" height="14" rx="2"></rect>
+                    <path d="M8 7V3h8v4 M3 12h18 M10 12v3h4v-3"></path>
+                </svg>
+                Experiencia
+            </h2>
+
+            <h3>Practicante de Informática</h3>
+            <p>Cooperativa COLUA R. L.</p>
+            <p>Agosto a septiembre de 2026</p>
+
+            <p>
+                Apoyé en el mantenimiento y la configuración de
+                computadoras, la instalación de software y la
+                atención de solicitudes de soporte técnico.
+            </p>
+
+            <p>
+                También colaboré en tareas básicas de redes,
+                en el diseño y la estructura de una aplicación
+                institucional y en pruebas de conexión
+                a bases de datos.
+            </p>
+
+            <h3>Instalación de equipos en un centro educativo</h3>
+            <p>2025</p>
+
+            <p>
+                Participé en la instalación y puesta en
+                funcionamiento de computadoras.
+            </p>
+        </div>
+
+        <div>
+            <div class="tarjeta">
+                <h2 class="titulo-icono">
+                    <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M2 8l10-5 10 5-10 5z M6 10v7c4 3 8 3 12 0v-7 M22 8v8"></path>
+                    </svg>
+                    Formación académica
+                </h2>
+
+                <h3>Técnico Universitario en Informática</h3>
+                <p>Universidad del Valle de Guatemala, Campus Altiplano</p>
+                <p>En curso · Cuarto semestre</p>
+
+                <h3>Bachiller en Ciencias y Letras por Madurez</h3>
+                <p>CEFPRO · 2017</p>
+            </div>
+
+            <div class="tarjeta seccion">
+                <h2 class="titulo-icono">
+                    <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 21H4V3h16v10 M8 7h8 M8 11h5"></path>
+                        <circle cx="17" cy="16" r="3"></circle>
+                        <path d="M15 19v4l2-1 2 1v-4"></path>
+                    </svg>
+                    Formación complementaria
+                </h2>
+
+                <h3>Reparador de Computadoras</h3>
+                <p>INTECAP · 2023</p>
+
+                <h3>CCNA: Introducción a las redes</h3>
+                <p>Cisco Networking Academy · Enero de 2026</p>
+
+                <h3>Redes II</h3>
+                <p>Finalizado · Certificado pendiente de entrega</p>
+
+                <h3>CCNA: Redes Empresariales, Seguridad y Automatización</h3>
+                <p>Cisco Networking Academy · En curso</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="botones">
+        <a class="boton" href="{% url 'portafolio:proyectos' %}">
+            Ver proyectos
+        </a>
+    </div>
+{% endblock %}

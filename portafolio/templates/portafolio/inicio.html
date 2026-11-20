@@ -1,0 +1,150 @@
+{% extends 'portafolio/base.html' %}
+{% load static %}
+
+{% block contenido %}
+    <div class="presentacion">
+        <div>
+            <p class="etiqueta titulo-icono">
+                <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M2 8l10-5 10 5-10 5z M6 10v7c4 3 8 3 12 0v-7 M22 8v8"></path>
+                </svg>
+                UVG Campus Altiplano
+            </p>
+
+            <h1>Hola, soy <span>Rivaldo Tale</span></h1>
+
+            <h2>Estudiante de Técnico Universitario en Informática</h2>
+
+            <p>
+                Me interesa el desarrollo de aplicaciones, el soporte
+                técnico y las redes de computadoras. Aquí comparto
+                mi formación y los proyectos en los que he participado.
+            </p>
+
+            <div class="botones">
+                <a class="boton enlace-icono"
+                   href="{% url 'portafolio:proyectos' %}">
+                    Ver proyectos
+                    <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 12h16 M14 6l6 6-6 6"></path>
+                    </svg>
+                </a>
+
+                <a class="boton secundario enlace-icono"
+                   href="{% url 'portafolio:contacto' %}">
+                    <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        <path d="M2 6l10 7L22 6"></path>
+                    </svg>
+                    Contactarme
+                </a>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <div class="avatar">RT</div>
+
+            <h2>Rivaldo Tale</h2>
+            <p>UVG Campus Altiplano</p>
+
+            <h3 class="titulo-icono">
+                <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="12" rx="2"></rect>
+                    <path d="M8 21h8 M12 16v5"></path>
+                </svg>
+                Resumen técnico
+            </h3>
+
+            <p>Enfoque actual: Web y redes.</p>
+            <p>Soporte técnico y mantenimiento de computadoras.</p>
+            <p>Desarrollo de proyectos académicos.</p>
+        </div>
+    </div>
+
+    <div class="seccion">
+        <h2 class="titulo-icono">
+            <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 7V4h7l2 3h9v13H3z"></path>
+            </svg>
+            Proyectos destacados
+        </h2>
+
+        <div class="tarjetas">
+            <div class="tarjeta">
+                <p class="etiqueta">Diseño y estructura</p>
+
+                <img class="imagen-proyecto"
+                     src="{% static 'portafolio/img/colua.png' %}"
+                     alt="Aplicación COLUA Digital">
+
+                <h3>COLUA Digital</h3>
+
+                <p>
+                    Colaboración en el diseño de interfaces y la
+                    estructura de una aplicación informativa
+                    para la Cooperativa COLUA.
+                </p>
+
+                <p>Figma · Antigravity</p>
+
+                <a class="enlace-icono"
+                   href="{% url 'portafolio:proyectos' %}">
+                    Ver proyecto
+                    <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 12h16 M14 6l6 6-6 6"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="tarjeta">
+                <p class="etiqueta">Aplicación web</p>
+
+                <img class="imagen-proyecto"
+                     src="{% static 'portafolio/img/cifrador.png' %}"
+                     alt="Aplicación de cifrado César">
+
+                <h3>DES-CIFRADOR</h3>
+
+                <p>
+                    Aplicación educativa para cifrar y descifrar
+                    textos con el método César.
+                </p>
+
+                <p>HTML · CSS · JavaScript</p>
+
+                <a class="enlace-icono"
+                   href="{% url 'portafolio:proyectos' %}">
+                    Ver proyecto
+                    <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 12h16 M14 6l6 6-6 6"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="tarjeta">
+                <p class="etiqueta">En desarrollo</p>
+
+                <img class="imagen-proyecto"
+                     src="{% static 'portafolio/img/inventario.png' %}"
+                     alt="Punto de venta de InventarioTienda">
+
+                <h3>InventarioTienda</h3>
+
+                <p>
+                    Aplicación web para gestionar productos,
+                    inventario, ventas y caja de una tienda.
+                </p>
+
+                <p>HTML · CSS · JavaScript</p>
+
+                <a class="enlace-icono"
+                   href="{% url 'portafolio:proyectos' %}">
+                    Ver proyecto
+                    <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 12h16 M14 6l6 6-6 6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ titulo }} | Rivaldo Tale</title>
+
+    <link rel="stylesheet" href="{% static 'portafolio/css/estilos.css' %}?v=2">
+</head>
+
+<body>
+    <header>
+        <a href="{% url 'portafolio:inicio' %}">
+            RT · Rivaldo Tale
+        </a>
+
+        <button id="boton-menu" type="button"
+                aria-controls="menu" aria-expanded="false">
+            <svg width="24" height="24" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="2" aria-hidden="true">
+                <path d="M3 6h18 M3 12h18 M3 18h18"></path>
+            </svg>
+            Menú
+        </button>
+
+        <nav id="menu">
+            <a href="{% url 'portafolio:inicio' %}">Inicio</a>
+            <a href="{% url 'portafolio:sobre_mi' %}">Sobre mí</a>
+            <a href="{% url 'portafolio:habilidades' %}">Habilidades</a>
+            <a href="{% url 'portafolio:proyectos' %}">Proyectos</a>
+            <a href="{% url 'portafolio:contacto' %}">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block contenido %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>Rivaldo Tale</p>
+
+        <p>
+            Estudiante de Técnico Universitario en Informática
+            · UVG Campus Altiplano
+        </p>
+
+        <a href="mailto:tele.benjamin123@gmail.com">
+            tele.benjamin123@gmail.com
+        </a>
+
+        <p>© 2026</p>
+    </footer>
+
+    <script src="{% static 'portafolio/js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+{% extends 'portafolio/base.html' %}
+
+{% block contenido %}
+    <div class="contacto">
+        <div>
+            <p class="etiqueta">Contacto</p>
+
+            <h1>¿Quieres conocer más sobre mis proyectos?</h1>
+
+            <p>Puedes escribirme o visitar mi perfil de GitHub.</p>
+
+            <div class="tarjeta dato-contacto">
+                <h2 class="titulo-icono">
+                    <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        <path d="M2 6l10 7L22 6"></path>
+                    </svg>
+                    Correo electrónico
+                </h2>
+
+                <a href="mailto:tele.benjamin123@gmail.com">
+                    tele.benjamin123@gmail.com
+                </a>
+            </div>
+
+            <div class="tarjeta dato-contacto">
+                <h2 class="titulo-icono">
+                    <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M9 19c-4 1-4-2-6-2 M9 22v-3c0-1 .1-1.5.5-2-3-.3-6-1.5-6-6A5 5 0 0 1 5 7.5C4.8 6.4 4.9 5.2 5.5 4c2 0 3.5 1.5 3.5 1.5a13 13 0 0 1 6 0S16.5 4 18.5 4c.6 1.2.7 2.4.5 3.5a5 5 0 0 1 1.5 3.5c0 4.5-3 5.7-6 6 .4.5.5 1 .5 2v3"></path>
+                    </svg>
+                    GitHub
+                </h2>
+
+                <a href="https://github.com/Rivaldo0101-sketch">
+                    Rivaldo0101-sketch
+                </a>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <h2 class="titulo-icono">
+                <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M22 2L9 15 M22 2l-7 20-6-7-7-6z"></path>
+                </svg>
+                Enviar mensaje
+            </h2>
+
+            <p>
+                Formulario de demostración.
+                No envía mensajes a un servidor.
+            </p>
+
+            <form id="formulario-contacto" novalidate>
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" required>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" rows="6" required></textarea>
+                </div>
+
+                <button class="boton" type="submit">
+                    Validar mensaje
+                </button>
+
+                <p id="respuesta-formulario" role="status"></p>
+            </form>
+        </div>
+    </div>
+{% endblock %}

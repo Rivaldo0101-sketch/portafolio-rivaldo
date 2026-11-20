@@ -1,0 +1,15 @@
+{% extends 'portafolio/base.html' %}
+
+{% block contenido %}
+    <div class="error-404">
+        <p class="numero-error">404</p>
+
+        <h1>Página no encontrada</h1>
+
+        <p>La dirección que buscas no existe o cambió.</p>
+
+        <a class="boton" href="{% url 'portafolio:inicio' %}">
+            Volver al inicio
+        </a>
+    </div>
+{% endblock %}

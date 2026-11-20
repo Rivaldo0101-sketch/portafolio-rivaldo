@@ -1,0 +1,128 @@
+{% extends 'portafolio/base.html' %}
+{% load static %}
+
+{% block contenido %}
+    <h1 class="titulo-icono">
+        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 7V4h7l2 3h9v13H3z"></path>
+        </svg>
+        Proyectos académicos y técnicos
+    </h1>
+
+    <p>
+        Estos son algunos proyectos en los que he participado
+        durante mi formación.
+    </p>
+
+    <div class="filtros">
+        <button type="button" id="filtro-todos">Todos</button>
+        <button type="button" id="filtro-web">Web</button>
+        <button type="button" id="filtro-movil">Móvil</button>
+    </div>
+
+    <div class="lista-proyectos">
+        <div class="tarjeta-proyecto movil">
+            <img class="imagen-proyecto"
+                 src="{% static 'portafolio/img/colua.png' %}"
+                 alt="Aplicación COLUA Digital">
+
+            <h2 class="titulo-icono">
+                <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="6" y="2" width="12" height="20" rx="2"></rect>
+                    <path d="M10 18h4"></path>
+                </svg>
+                COLUA Digital
+            </h2>
+
+            <p>
+                Aplicación informativa de la Cooperativa COLUA
+                para consultar noticias e información sobre
+                sus productos, beneficios y agencias.
+            </p>
+
+            <p>
+                Colaboré en el diseño de interfaces con Figma
+                y en la estructura de la aplicación
+                utilizando Antigravity.
+            </p>
+
+            <p>Herramientas de mi participación: Figma y Antigravity.</p>
+
+            <a class="enlace-icono"
+               href="https://github.com/Rivaldo0101-sketch/colua-noticias">
+                <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 5l-6 7 6 7 M16 5l6 7-6 7"></path>
+                </svg>
+                Ver repositorio
+            </a>
+        </div>
+
+        <div class="tarjeta-proyecto web">
+            <img class="imagen-proyecto"
+                 src="{% static 'portafolio/img/cifrador.png' %}"
+                 alt="Aplicación de cifrado César">
+
+            <h2 class="titulo-icono">
+                <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="4" y="10" width="16" height="12" rx="2"></rect>
+                    <path d="M8 10V6a4 4 0 0 1 8 0v4 M12 15v3"></path>
+                </svg>
+                DES-CIFRADOR
+            </h2>
+
+            <p>
+                Aplicación web educativa para cifrar y descifrar
+                textos con el método César. Incluye la letra Ñ,
+                conversión a binario y hexadecimal y copia
+                de resultados.
+            </p>
+
+            <p>Tecnologías: HTML, CSS y JavaScript.</p>
+
+            <a class="enlace-icono"
+               href="https://github.com/Rivaldo0101-sketch/des-cifrador">
+                <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 5l-6 7 6 7 M16 5l6 7-6 7"></path>
+                </svg>
+                Ver repositorio
+            </a>
+        </div>
+
+        <div class="tarjeta-proyecto web">
+            <img class="imagen-proyecto"
+                 src="{% static 'portafolio/img/inventario.png' %}"
+                 alt="Punto de venta de InventarioTienda">
+
+            <h2 class="titulo-icono">
+                <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 3h2l3 12h11l3-9H6"></path>
+                    <circle cx="9" cy="20" r="1"></circle>
+                    <circle cx="18" cy="20" r="1"></circle>
+                </svg>
+                InventarioTienda
+            </h2>
+
+            <p>
+                Aplicación web en desarrollo para registrar
+                productos, controlar existencias y gestionar
+                ventas y caja de una tienda.
+            </p>
+
+            <p>
+                Incluye carrito de venta, historial y respaldos.
+                Los datos se guardan en el navegador.
+            </p>
+
+            <p>Tecnologías: HTML, CSS y JavaScript.</p>
+            <p>Estado: en desarrollo y pruebas.</p>
+
+            <a class="enlace-icono"
+               href="https://github.com/Rivaldo0101-sketch/inventario-tienda">
+                <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 5l-6 7 6 7 M16 5l6 7-6 7"></path>
+                </svg>
+                Ver repositorio
+            </a>
+        </div>
+    </div>
+{% endblock %}
