@@ -7,32 +7,58 @@
 
     <title>{{ titulo }} | Rivaldo Tale</title>
 
-    <link rel="stylesheet" href="{% static 'portafolio/css/estilos.css' %}?v=2">
+    <link rel="stylesheet" href="{% static 'portafolio/css/estilos.css' %}?v=3">
 </head>
 
 <body>
-    <header>
-        <a href="{% url 'portafolio:inicio' %}">
-            RT · Rivaldo Tale
-        </a>
+    <header class="cabecera">
+        <div class="barra">
+            <a class="marca" href="{% url 'portafolio:inicio' %}">
+                <span class="logo">RT</span>
 
-        <button id="boton-menu" type="button"
-                aria-controls="menu" aria-expanded="false">
-            <svg width="24" height="24" viewBox="0 0 24 24"
-                 fill="none" stroke="currentColor"
-                 stroke-width="2" aria-hidden="true">
-                <path d="M3 6h18 M3 12h18 M3 18h18"></path>
-            </svg>
-            Menú
-        </button>
+                <span>
+                    <strong>Rivaldo Tale</strong>
+                    <span class="nombre-campus">UVG Campus Altiplano</span>
+                </span>
+            </a>
 
-        <nav id="menu">
-            <a href="{% url 'portafolio:inicio' %}">Inicio</a>
-            <a href="{% url 'portafolio:sobre_mi' %}">Sobre mí</a>
-            <a href="{% url 'portafolio:habilidades' %}">Habilidades</a>
-            <a href="{% url 'portafolio:proyectos' %}">Proyectos</a>
-            <a href="{% url 'portafolio:contacto' %}">Contacto</a>
-        </nav>
+            <button id="boton-menu" type="button"
+                    aria-controls="menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor"
+                     stroke-width="2" aria-hidden="true">
+                    <path d="M3 6h18 M3 12h18 M3 18h18"></path>
+                </svg>
+                Menú
+            </button>
+
+            <nav id="menu">
+                <a href="{% url 'portafolio:inicio' %}"
+                   {% if titulo == 'Inicio' %}class="actual"{% endif %}>
+                    Inicio
+                </a>
+
+                <a href="{% url 'portafolio:sobre_mi' %}"
+                   {% if titulo == 'Sobre mí' %}class="actual"{% endif %}>
+                    Sobre mí
+                </a>
+
+                <a href="{% url 'portafolio:habilidades' %}"
+                   {% if titulo == 'Habilidades' %}class="actual"{% endif %}>
+                    Habilidades
+                </a>
+
+                <a href="{% url 'portafolio:proyectos' %}"
+                   {% if titulo == 'Proyectos' %}class="actual"{% endif %}>
+                    Proyectos
+                </a>
+
+                <a href="{% url 'portafolio:contacto' %}"
+                   {% if titulo == 'Contacto' %}class="actual"{% endif %}>
+                    Contacto
+                </a>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -40,19 +66,23 @@
         {% endblock %}
     </main>
 
-    <footer>
-        <p>Rivaldo Tale</p>
+    <footer class="pie">
+        <div class="contenido-pie">
+            <div>
+                <p class="autor">Rivaldo Tale</p>
 
-        <p>
-            Estudiante de Técnico Universitario en Informática
-            · UVG Campus Altiplano
-        </p>
+                <p>
+                    Estudiante de Técnico Universitario en Informática
+                    · UVG Campus Altiplano
+                </p>
 
-        <a href="mailto:tele.benjamin123@gmail.com">
-            tele.benjamin123@gmail.com
-        </a>
+                <a href="mailto:tele.benjamin123@gmail.com">
+                    tele.benjamin123@gmail.com
+                </a>
+            </div>
 
-        <p>© 2026</p>
+            <p>© 2026 · Todos los derechos reservados.</p>
+        </div>
     </footer>
 
     <script src="{% static 'portafolio/js/main.js' %}"></script>

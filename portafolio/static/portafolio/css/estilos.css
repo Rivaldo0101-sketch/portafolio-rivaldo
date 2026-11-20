@@ -377,3 +377,105 @@ form .boton {
 .boton .icono {
     stroke: currentColor;
 }
+header.cabecera {
+    display: block;
+    padding: 16px 24px;
+}
+
+.barra {
+    max-width: 1152px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--texto);
+}
+
+.marca:hover {
+    text-decoration: none;
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--celeste);
+    border-radius: 8px;
+    color: var(--celeste);
+    font-weight: bold;
+}
+
+.nombre-campus {
+    display: block;
+    color: var(--texto-secundario);
+    font-size: 12px;
+}
+
+#menu {
+    gap: 8px;
+}
+
+#menu a {
+    padding: 8px 12px;
+    color: var(--texto-secundario);
+    font-size: 14px;
+    border-bottom: 2px solid transparent;
+}
+
+#menu a:hover,
+#menu a.actual {
+    background-color: var(--panel);
+    color: var(--celeste);
+    border-bottom-color: var(--celeste);
+    text-decoration: none;
+}
+
+footer.pie {
+    padding: 24px;
+}
+
+.contenido-pie {
+    max-width: 1152px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    font-size: 12px;
+}
+
+.contenido-pie p {
+    margin: 4px 0;
+}
+
+.contenido-pie .autor {
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .barra {
+        flex-wrap: wrap;
+    }
+
+    .barra #menu {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .contenido-pie {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
