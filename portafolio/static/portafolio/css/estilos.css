@@ -479,3 +479,17 @@ footer.pie {
         gap: 16px;
     }
 }
+.tarjeta-personal {
+    position: relative;
+}
+
+.foto-personal {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--celeste);
+}
