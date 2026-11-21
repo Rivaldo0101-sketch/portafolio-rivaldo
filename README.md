@@ -3,12 +3,18 @@
 Proyecto del curso de Introducción a Programación Web.
 Presenta mi formación, habilidades y proyectos académicos.
 
+## Sitio publicado
+
+https://portafolio-rivaldo.onrender.com/
+
 ## Tecnologías
 
 - Python y Django.
 - HTML.
 - CSS.
 - JavaScript.
+- WhiteNoise para servir los archivos estáticos.
+- Gunicorn para ejecutar la aplicación en Render.
 
 ## Páginas
 
@@ -21,7 +27,7 @@ Presenta mi formación, habilidades y proyectos académicos.
 
 ## Funciones
 
-- Menú para pantallas pequeñas.
+- Menú desplegable para pantallas pequeñas.
 - Filtros de proyectos: Todos, Web y Móvil.
 - Validación de campos vacíos y formato del correo.
 - Mensaje de confirmación al completar el formulario.
@@ -36,7 +42,7 @@ Necesitas tener Python y Git instalados.
 
 ### 1. Descargar el proyecto
 
-Abre una terminal y ejecuta:
+Abre una terminal y ejecuta estos comandos, uno después del otro:
 
 ```powershell
 git clone https://github.com/Rivaldo0101-sketch/portafolio-rivaldo.git
@@ -49,15 +55,21 @@ cd portafolio-rivaldo
 python -m venv .venv
 ```
 
-### 3. Instalar Django
+### 3. Instalar Django y las dependencias
+
+Este comando instala los paquetes incluidos en requirements.txt:
 
 ```powershell
-.venv\Scripts\python -m pip install django
+.venv\Scripts\python -m pip install -r requirements.txt
 ```
 
 ### 4. Iniciar el servidor
 
-Comprueba que en mi_portafolio/settings.py esté DEBUG = True.
+Para trabajar localmente, comprueba que DEBUG esté activado en
+mi_portafolio/settings.py. Si se configura automáticamente según el
+entorno, conserva esa configuración.
+
+Ejecuta:
 
 ```powershell
 .venv\Scripts\python manage.py runserver
@@ -71,14 +83,19 @@ Para detener el servidor, presiona Ctrl + C en la terminal.
 
 ## Cómo probar la página 404
 
-En mi_portafolio/settings.py, cambia temporalmente:
+Puedes verla directamente en el sitio publicado:
+
+https://portafolio-rivaldo.onrender.com/no-existe/
+
+Para probarla en tu computadora, cambia temporalmente estas opciones
+en mi_portafolio/settings.py:
 
 ```python
 DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 ```
 
-Inicia el servidor con este comando para cargar también los estilos durante la prueba local:
+Conserva las demás configuraciones del archivo y ejecuta:
 
 ```powershell
 .venv\Scripts\python manage.py runserver --insecure
@@ -90,12 +107,14 @@ http://127.0.0.1:8000/no-existe/
 
 Aparecerá la página personalizada con el botón para volver al inicio.
 
-Después de probarla, vuelve a poner DEBUG = True.
-El comando con --insecure se utiliza solamente para esta prueba local.
+Después de probarla, restaura la configuración anterior de DEBUG
+y ALLOWED_HOSTS.
+
+El argumento --insecure se utiliza únicamente para esta prueba local.
 
 ## Autor
 
 Rivaldo Tale.
 
 Técnico Universitario en Informática.
-Universidad del Valle de Guatemala, Campus Altiplano. 
+Universidad del Valle de Guatemala, Campus Altiplano.
