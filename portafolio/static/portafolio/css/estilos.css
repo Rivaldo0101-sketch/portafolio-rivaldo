@@ -482,14 +482,27 @@ footer.pie {
 .tarjeta-personal {
     position: relative;
 }
+.tarjeta-personal {
+    padding: 24px;
+}
 
 .foto-personal {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    width: 64px;
-    height: 64px;
+    position: static;
+    float: right;
+    width: 140px;
+    height: 140px;
+    margin: 0 0 16px 16px;
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid var(--celeste);
+}
+
+.tarjeta-personal h3 {
+    clear: both;
+}
+.enlaces-proyecto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
 }
